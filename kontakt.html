@@ -7,44 +7,88 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">
+                <img src="logo.png" alt="Logo" class="logo">
+            </a>
+            <div class="header-text">
+                <h1>Psycholog Psychoterapeuta</h1>
+                <p>Zapraszam do kontaktu – odpowiem tak szybko, jak to możliwe.</p>
+            </div>
+        </div>
+    </header>
 
-<header>
-    <h1>Kontakt</h1>
-    <p>Zapraszam do kontaktu – odpowiem tak szybko, jak to możliwe.</p>
-</header>
+    <nav>
+        <a href="index.html">O mnie</a>
+        <a href="services.html">Udzielana pomoc</a>
+        <a href="kwalifikacje.html">Kwalifikacje</a>
+        <a href="kontakt.html">Kontakt</a>
+    </nav>
 
-<nav>
-    <a href="index.html#o-mnie">O mnie</a>
-    <a href="index.html#uslugi">Usługi</a>
-    <a href="kontakt.html">Kontakt</a>
-</nav>
+    <div class="container contact">
+        <h2>Dane kontaktowe</h2>
+        <p><strong>Email:</strong> <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a></p>
+        <p><strong>Telefon:</strong> <a href="tel:+48505843108">+48 505 843 108</a></p>
 
-<div class="container contact">
-    <h2>Dane kontaktowe</h2>
-    <p><strong>Email:</strong> psycholog.zanetakomar@gmail.com</p>
-    <p><strong>Telefon:</strong> +48 505 843 108</p>
+        <h2>Formularz kontaktowy</h2>
+        <form id="contact-form" action="https://formsubmit.co/psycholog.zanetakomar@gmail.com" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Imię:</label>
+                <input type="text" id="name" name="name" required placeholder="Wpisz swoje imię">
+            </div>
 
+            <div class="form-group">
+                <label for="email">Email kontaktowy:</label>
+                <input type="email" id="email" name="email" required placeholder="Wpisz swój email">
+            </div>
 
-    <h2>Formularz kontaktowy</h2>
-    <form action="https://formsubmit.co/psycholog.zanetakomar@gmail.com" method="POST">
-        <label for="name">Imię:</label><br>
-        <input type="text" id="name" name="name" required><br><br>
+            <div class="form-group">
+                <label for="message">Treść wiadomości:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Napisz swoją wiadomość" minlength="10"></textarea>
+            </div>
 
-        <label for="email">Email kontaktowy:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+            <input type="hidden" name="_next" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/dziekujemy.html">
+            <input type="hidden" name="_failure" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/error.html">
 
-        <label for="message">Treść wiadomości:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+        </form>
+    </div>
 
-        <input type="hidden" name="_next" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/dziekujemy.html">
+    <footer>
+        &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
+    </footer>
 
-        <button type="submit">Wyślij wiadomość</button>
-    </form>
-</div>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); 
 
-<footer>
-    &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
-</footer>
+            var name = document.getElementById('name').value;
+            if (!name.trim()) {
+                alert("Imię jest wymagane.");
+                return;
+            }
 
+            var email = document.getElementById('email').value;
+            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!emailPattern.test(email)) {
+                alert("Proszę podać poprawny adres e-mail.");
+                return;
+            }
+
+            var message = document.getElementById('message').value;
+            if (!message.trim()) {
+                alert("Wiadomość nie może być pusta.");
+                return;
+            }
+            if (message.trim().length < 10) {
+                alert("Wiadomość musi mieć co najmniej 10 znaków.");
+                return;
+            }
+
+           
+            this.submit();
+        });
+    </script>
 </body>
 </html>
