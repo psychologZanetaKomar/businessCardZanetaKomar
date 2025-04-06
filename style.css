@@ -411,3 +411,45 @@ header p {
         font-size: 1em;
     }
 }
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    .header-text h1 {
+        font-size: 1.8em;
+    }
+
+    .header-text p {
+        font-size: 1em;
+    }
+
+ 
+    .photo-section .image {
+        width: 150px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+
+    .header-content {
+        display: block;
+    }
+
+    .header-text {
+        margin-top: 20px;
+    }
+
+    .header-content img {
+        max-width: 100%;
+        height: auto;
+    }
+}
