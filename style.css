@@ -21,16 +21,6 @@ header {
     align-items: center;
     width: 100%;
 }
-.image {
-    position: absolute;
-    top: 60px;
-    right: 250px; 
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 header h1 {
     margin: 0;
     font-size: 2.8em;
@@ -298,7 +288,7 @@ header p {
 }
 
 .qualifications h2 {
-    color: #4CAF50; /* Zielony nagłówek sekcji */
+    color: #4CAF50;
     font-size: 2em;
 }
 
@@ -330,4 +320,11 @@ header p {
 .certificate-item p {
     margin-top: 10px;
     font-size: 1em;
+}
+.photo-section .image {
+    /* max-height: 80px; */
+    width: 130px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
 }
