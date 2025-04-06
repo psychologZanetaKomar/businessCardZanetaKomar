@@ -61,34 +61,29 @@
 
     <script>
         document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault(); 
+        var name = document.getElementById('name').value;
+        if (!name.trim()) {
+            alert("Imię jest wymagane.");
+            return false;
+        }
 
-            var name = document.getElementById('name').value;
-            if (!name.trim()) {
-                alert("Imię jest wymagane.");
-                return;
-            }
+        var email = document.getElementById('email').value;
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (!emailPattern.test(email)) {
+            alert("Proszę podać poprawny adres e-mail.");
+            return false;
+        }
 
-            var email = document.getElementById('email').value;
-            var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-            if (!emailPattern.test(email)) {
-                alert("Proszę podać poprawny adres e-mail.");
-                return;
-            }
-
-            var message = document.getElementById('message').value;
-            if (!message.trim()) {
-                alert("Wiadomość nie może być pusta.");
-                return;
-            }
-            if (message.trim().length < 10) {
-                alert("Wiadomość musi mieć co najmniej 10 znaków.");
-                return;
-            }
-
-           
-            this.submit();
-        });
+        var message = document.getElementById('message').value;
+        if (!message.trim()) {
+            alert("Wiadomość nie może być pusta.");
+            return false;
+        }
+        if (message.trim().length < 10) {
+            alert("Wiadomość musi mieć co najmniej 10 znaków.");
+            return false;
+        }
+    });
     </script>
 </body>
 </html>
