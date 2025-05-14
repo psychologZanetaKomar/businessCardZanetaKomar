@@ -453,3 +453,27 @@ header p {
         height: auto;
     }
 }
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    z-index: 1000;
+}
+.cookie-banner a {
+    color: #4CAF50;
+    text-decoration: underline;
+}
+.cookie-banner button {
+    margin-left: 20px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}

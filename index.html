@@ -15,6 +15,10 @@
         gtag('config', 'G-4LY9YD8XFM');
     </script>
 </head>
+<div id="cookie-banner" class="cookie-banner">
+    <p>Strona korzysta z plików cookie w celu poprawy działania oraz w celach statystycznych. Korzystając ze strony, wyrażasz zgodę na ich użycie.</p>
+    <button onclick="acceptCookies()">Akceptuję</button>
+</div>
 <body>
     <header>
         <div class="header-content">
@@ -67,6 +71,17 @@
     <footer>
         &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
     </footer>
-    
+    <script>
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+            localStorage.setItem('cookiesAccepted', 'true');
+        }
+        
+        window.addEventListener('load', function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').style.display = 'block';
+            }
+        });
+        </script>
     </body>
     </html>
