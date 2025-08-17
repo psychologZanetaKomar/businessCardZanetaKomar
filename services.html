@@ -1,121 +1,111 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Udzielana pomoc - Żaneta Komar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Dodaję prosty styl do detali */
-        details {
-            margin-bottom: 10px;
-        }
-        summary {
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .therapy-description {
-            margin-top: 5px;
-            padding-left: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udzielana pomoc - Żaneta Komar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="index.html">
-                <img src="logo.png" alt="Logo" class="logo">
-            </a>
-            <div class="header-text">
-                <h1>Psycholog Psychoterapeuta</h1>
-                <p>Wsparcie w drodze do zdrowia psychicznego</p>
-            </div>
-        </div>
-    </header>
 
-    <nav>
-        <a href="index.html">O mnie</a>
-        <a href="services.html">Udzielana pomoc</a>
-        <a href="kwalifikacje.html">Kwalifikacje</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
-
-    <div class="container">
-        <section id="uslugi" class="services">
-            <h2>Rodzaje prowadzonych terapii</h2>
-            <ul class="therapy-list">
-                <li>
-                    <details>
-                        <summary>Terapia indywidualna dorosłych</summary>
-                        <div class="therapy-description">
-                            <p>Indywidualna terapia przeznaczona dla osób dorosłych, które borykają się z różnymi problemami emocjonalnymi, psychologicznymi lub życiowymi. Pomaga w rozwiązywaniu problemów, poprawie jakości życia oraz rozwoju osobistym.</p>
-                        </div>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>Terapia młodzieży</summary>
-                        <div class="therapy-description">
-                            <p>Terapia dedykowana młodzieży, która zmaga się z trudnościami w okresie dorastania, takimi jak stres, depresja, problemy szkolne, rodzinne i rówieśnicze. Celem jest wsparcie w rozwoju emocjonalnym i społecznym młodych ludzi.</p>
-                        </div>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>Wsparcie w kryzysach życiowych</summary>
-                        <div class="therapy-description">
-                            <p>Pomoc w momentach kryzysowych, takich jak śmierć bliskiej osoby, rozwód, utrata pracy czy inne dramatyczne wydarzenia. Terapia pomaga w radzeniu sobie z emocjami, stresami i podejmowaniu decyzji w trudnych czasach.</p>
-                        </div>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>Terapia zaburzeń lękowych</summary>
-                        <div class="therapy-description">
-                            <p>Terapia skupiająca się na leczeniu lęków, fobii oraz zaburzeń lękowych, takich jak lęk uogólniony, paniczny czy społeczny. Pomaga w radzeniu sobie z lękiem, odzyskaniu kontroli nad życiem i poprawie jakości codziennego funkcjonowania.</p>
-                        </div>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>Terapia depresji</summary>
-                        <div class="therapy-description">
-                            <p>Terapia dla osób cierpiących na depresję, mających trudności w radzeniu sobie z codziennym życiem. Celem jest poprawa samopoczucia, zwiększenie energii oraz pomoc w pokonywaniu przytłaczających emocji i myśli.</p>
-                        </div>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>Terapia traumy</summary>
-                        <div class="therapy-description">
-                            <p>Specjalistyczna pomoc w leczeniu traumy po traumatycznych wydarzeniach, takich jak przemoc, wypadki, wojna czy inne poważne zdarzenia. Terapia pomaga w przetwarzaniu przeżyć oraz odzyskaniu poczucia bezpieczeństwa.</p>
-                        </div>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>Pomoc w problemach relacyjnych</summary>
-                        <div class="therapy-description">
-                            <p>Wsparcie w poprawie relacji międzyludzkich, zarówno w rodzinie, jak i w pracy. Terapia pomaga w rozwiązywaniu konfliktów, budowaniu lepszej komunikacji i zrozumienia między osobami.</p>
-                        </div>
-                    </details>
-                </li>
-                <li>
-                    <details>
-                        <summary>Rozwój osobisty i samopoznanie</summary>
-                        <div class="therapy-description">
-                            <p>Proces wspierający osobisty rozwój, pomagający w lepszym zrozumieniu siebie, swoich emocji, celów życiowych oraz potencjału. Terapia koncentruje się na odkrywaniu pasji i budowaniu poczucia spełnienia.</p>
-                        </div>
-                    </details>
-                </li>
-            </ul>
-        </section>
+  <!-- HEADER -->
+  <header class="subpage-header">
+    <div class="header-content">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+      <div class="header-text">
+        <h1>Żaneta Paulina Komar</h1>
+        <p>Psycholog · Psychoterapeuta</p>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
-    </footer>
+  <!-- NAWIGACJA -->
+  <nav class="navbar">
+    <a href="index.html#about">O mnie</a>
+    <a href="services.html" class="active">Udzielana pomoc</a>
+    <a href="kwalifikacje.html">Kwalifikacje</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+
+  <!-- SEKCJA USŁUG -->
+  <main class="container">
+    <section id="uslugi" class="services">
+      <h2>Rodzaje prowadzonych terapii</h2>
+      <ul class="therapy-list">
+        <li>
+          <details>
+            <summary>Terapia indywidualna dorosłych</summary>
+            <div class="therapy-description">
+              <p>Indywidualna terapia przeznaczona dla osób dorosłych, które borykają się z różnymi problemami emocjonalnymi, psychologicznymi lub życiowymi.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Terapia młodzieży</summary>
+            <div class="therapy-description">
+              <p>Terapia dedykowana młodzieży, która zmaga się z trudnościami okresu dorastania, takimi jak stres, depresja czy problemy szkolne.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Wsparcie w kryzysach życiowych</summary>
+            <div class="therapy-description">
+              <p>Pomoc w momentach kryzysowych, takich jak śmierć bliskiej osoby, rozwód, utrata pracy czy inne dramatyczne wydarzenia.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Terapia zaburzeń lękowych</summary>
+            <div class="therapy-description">
+              <p>Terapia skupiająca się na leczeniu lęków, fobii oraz zaburzeń lękowych, takich jak lęk uogólniony, paniczny czy społeczny.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Terapia depresji</summary>
+            <div class="therapy-description">
+              <p>Terapia dla osób cierpiących na depresję, mających trudności w codziennym funkcjonowaniu i poczuciu energii życiowej.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Terapia traumy</summary>
+            <div class="therapy-description">
+              <p>Specjalistyczna pomoc w leczeniu traumy po trudnych doświadczeniach, takich jak przemoc, wypadki czy inne dramatyczne wydarzenia.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Pomoc w problemach relacyjnych</summary>
+            <div class="therapy-description">
+              <p>Wsparcie w poprawie relacji rodzinnych, partnerskich czy zawodowych. Terapia ułatwia rozwiązywanie konfliktów i lepszą komunikację.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Rozwój osobisty i samopoznanie</summary>
+            <div class="therapy-description">
+              <p>Proces wspierający osobisty rozwój, pomagający w lepszym zrozumieniu siebie, swoich emocji, celów i potencjału.</p>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- STOPKA -->
+  <footer>
+    &copy; 2025 Żaneta Paulina Komar - Psycholog Psychoterapeuta. Wszystkie prawa zastrzeżone.
+  </footer>
 
 </body>
 </html>

@@ -1,57 +1,98 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kwalifikacje - Żaneta Komar</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kwalifikacje - Żaneta Komar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="index.html">
-                <img src="logo.png" alt="Logo" class="logo">
-            </a>
-            <div class="header-text">
-                <h1>Psycholog Psychoterapeuta</h1>
-                <p>Wsparcie w drodze do zdrowia psychicznego</p>
-            </div>
-        </div>
-    </header>
-
-    <nav>
-        <a href="index.html">O mnie</a>
-        <a href="services.html">Udzielana pomoc</a>
-        <a href="kwalifikacje.html" class="active">Kwalifikacje</a>
-        <a href="kontakt.html">Kontakt</a>
-    </nav>
-
-    <div class="container">
-        <section id="Qualifications" class="qualifications">
-            <h2>Kwalifikacje</h2>
-            <p>Oto niektóre z moich certyfikatów i dyplomów, które potwierdzają moje kwalifikacje zawodowe:</p>
-            
-            <div class="certificate-gallery">
-                <div class="certificate-item">
-                    <img src="dyplom_intra.jpg" alt="Dyplom_Intra" class="cert-img">
-
-                </div>
-                <div class="certificate-item">
-                    <img src="kurs_TSNR.jpg" alt="Certyfikat" class="cert-img">
-            
-                </div>
-                <div class="certificate-item">
-                    <img src="dyplom_UG.jpg" alt="Certyfikat" class="cert-img">
-
-                </div>
-            </div>
-        </section>
+<div class="page-wrapper">
+  <!-- HEADER -->
+  <header class="subpage-header">
+    <div class="header-content">
+      <a href="index.html">
+        <img src="logo.png" alt="Logo" class="logo">
+      </a>
+      <div class="header-text">
+        <h1>Żaneta Paulina Komar</h1>
+        <p>Psycholog · Psychoterapeuta</p>
+      </div>
     </div>
+  </header>
 
-    <footer>
-        &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
-    </footer>
+  <!-- NAWIGACJA -->
+  <nav class="navbar">
+    <a href="index.html#about">O mnie</a>
+    <a href="services.html">Udzielana pomoc</a>
+    <a href="kwalifikacje.html" class="active">Kwalifikacje</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 
+  <!-- SEKCJA KWALIFIKACJE -->
+  <main class="container">
+    <section id="Qualifications" class="qualifications">
+      <h2>Kwalifikacje</h2>
+      <p>Oto niektóre z moich certyfikatów i dyplomów, które potwierdzają moje kwalifikacje zawodowe:</p>
+      
+      <div class="certificate-gallery">
+        <div class="certificate-item">
+          <img src="dyplom_intra.jpg" alt="Dyplom Intra" class="cert-img">
+        </div>
+        <div class="certificate-item">
+          <img src="kurs_TSNR.jpg" alt="Kurs TSNR" class="cert-img">
+        </div>
+        <div class="certificate-item">
+          <img src="dyplom_UG.jpg" alt="Dyplom UG" class="cert-img">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- STOPKA -->
+  <footer>
+    &copy; 2025 Żaneta Paulina Komar - Psycholog Psychoterapeuta. Wszystkie prawa zastrzeżone.
+  </footer>
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <span id="lightbox-close">&times;</span>
+  <img src="" alt="Powiększone zdjęcie">
+</div>
+<script>
+  const certImages = document.querySelectorAll('.certificate-item img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  certImages.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+
+  // Kliknięcie w przycisk X
+  lightboxClose.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+    lightboxImg.src = '';
+  });
+
+  // Kliknięcie w tło (poza obrazkiem)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg && e.target !== lightboxClose) {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    }
+  });
+
+  // ESC zamyka lightbox
+  document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+    }
+  });
+</script>
+</div>
 </body>
 </html>
