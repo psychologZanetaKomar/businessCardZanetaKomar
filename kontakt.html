@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+<div class="page-wrapper">
+    <!-- HEADER -->
+    <header class="subpage-header">
         <div class="header-content">
             <a href="index.html">
                 <img src="logo.png" alt="Logo" class="logo">
@@ -19,71 +21,83 @@
         </div>
     </header>
 
-    <nav>
+    <!-- NAWIGACJA -->
+    <nav class="navbar">
         <a href="index.html">O mnie</a>
         <a href="services.html">Udzielana pomoc</a>
         <a href="kwalifikacje.html">Kwalifikacje</a>
-        <a href="kontakt.html">Kontakt</a>
+        <a href="kontakt.html" class="active">Kontakt</a>
     </nav>
 
-    <div class="container contact">
-        <h2>Dane kontaktowe</h2>
-        <p><strong>Email:</strong> <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a></p>
-        <p><strong>Telefon:</strong> <a href="tel:+48505843108">+48 505 843 108</a></p>
+    <!-- TREŚĆ -->
+    <main class="contact-section">
+        <div class="contact-overlay">
+            <div class="container contact-container">
+                <h2>Dane kontaktowe</h2>
+                <p><strong>Email:</strong> <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a></p>
+                <p><strong>Telefon:</strong> <a href="tel:+48505843108">+48 505 843 108</a></p>
+                <p><strong>Adres:</strong> ul. Pieniężnego 18B, 10-699 Olsztyn</p>
 
-        <h2>Formularz kontaktowy</h2>
-        <form id="contact-form" action="https://formsubmit.co/psycholog.zanetakomar@gmail.com" method="POST" class="contact-form">
-            <div class="form-group">
-                <label for="name">Imię:</label>
-                <input type="text" id="name" name="name" required placeholder="Wpisz swoje imię">
+                <!-- Formularz kontaktowy -->
+                <h2>Formularz kontaktowy</h2>
+                <form id="contact-form" action="https://formsubmit.co/psycholog.zanetakomar@gmail.com" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Imię:</label>
+                        <input type="text" id="name" name="name" required placeholder="Wpisz swoje imię">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email kontaktowy:</label>
+                        <input type="email" id="email" name="email" required placeholder="Wpisz swój email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Treść wiadomości:</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Napisz swoją wiadomość" minlength="10"></textarea>
+                    </div>
+
+                    <input type="hidden" name="_next" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/dziekujemy.html">
+                    <input type="hidden" name="_failure" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/error.html">
+
+                    <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                </form>
             </div>
+        </div>
+    </main>
 
-            <div class="form-group">
-                <label for="email">Email kontaktowy:</label>
-                <input type="email" id="email" name="email" required placeholder="Wpisz swój email">
-            </div>
-
-            <div class="form-group">
-                <label for="message">Treść wiadomości:</label>
-                <textarea id="message" name="message" rows="5" required placeholder="Napisz swoją wiadomość" minlength="10"></textarea>
-            </div>
-
-            <input type="hidden" name="_next" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/dziekujemy.html">
-            <input type="hidden" name="_failure" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/error.html">
-
-            <button type="submit" class="submit-btn">Wyślij wiadomość</button>
-        </form>
-    </div>
-
+    <!-- STOPKA -->
     <footer>
         &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
     </footer>
+</div>
 
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-        var name = document.getElementById('name').value;
-        if (!name.trim()) {
-            alert("Imię jest wymagane.");
-            return false;
-        }
+<!-- WALIDACJA JS -->
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    var name = document.getElementById('name').value;
+    if (!name.trim()) {
+        alert("Imię jest wymagane.");
+        return false;
+    }
 
-        var email = document.getElementById('email').value;
-        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-        if (!emailPattern.test(email)) {
-            alert("Proszę podać poprawny adres e-mail.");
-            return false;
-        }
+    var email = document.getElementById('email').value;
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(email)) {
+        alert("Proszę podać poprawny adres e-mail.");
+        return false;
+    }
 
-        var message = document.getElementById('message').value;
-        if (!message.trim()) {
-            alert("Wiadomość nie może być pusta.");
-            return false;
-        }
-        if (message.trim().length < 10) {
-            alert("Wiadomość musi mieć co najmniej 10 znaków.");
-            return false;
-        }
-    });
-    </script>
+    var message = document.getElementById('message').value;
+    if (!message.trim()) {
+        alert("Wiadomość nie może być pusta.");
+        return false;
+    }
+    if (message.trim().length < 10) {
+        alert("Wiadomość musi mieć co najmniej 10 znaków.");
+        return false;
+    }
+});
+</script>
+
 </body>
 </html>

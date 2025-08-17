@@ -2,63 +2,23 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Błąd</title>
+    <title>Błąd!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #fff3e0;
-            color: #d32f2f;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
-        }
-
-        .error-box {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-        }
-
-        h1 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-        }
-
-        a {
-            display: inline-block;
-            padding: 10px 25px;
-            background-color: #d32f2f;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        a:hover {
-            background-color: #c62828;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="page-wrapper">
+    <main class="error-page">
+        <div class="error-box">
+            <h1>Wystąpił błąd!</h1>
+            <p>Twoja wiadomość nie została wysłana. Spróbuj skontaktować się bezpośrednio na adres <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a></p>
+            <a href="index.html" class="btn-subtle">Wróć do strony głównej</a>
+        </div>
+    </main>
 
-    <div class="error-box">
-        <h1>Wystąpił błąd!</h1>
-        <p>Twoja wiadomość nie została wysłana. Spróbuj skontaktować się bezpośrednio na adres psycholog.zanetakomar@gmail.com</p>
-        <a href="index.html">Wróć do strony głównej</a>
-    </div>
-
+    <footer>
+        &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
+    </footer>
+</div>
 </body>
 </html>
