@@ -806,3 +806,90 @@ footer {
     background-color: #388e3c;
     transform: translateY(-2px);
 }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Hero i nawigacja */
+.hero-content {
+    padding: 20px;
+}
+
+.navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Sekcja o mnie */
+.about .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.about-image, .about-text {
+    flex: 1 1 100%;
+}
+
+/* Formularze i przyciski */
+button, .btn-primary {
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+/* Media Queries – telefony i małe ekrany */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 6px 10px;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .about-image, .about-text {
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: justify;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
