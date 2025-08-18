@@ -70,7 +70,6 @@ body {
     background: #357ABD;
 }
 
-/* NAWIGACJA W HERO */
 .navbar {
     margin: 20px 0;
 }
@@ -88,7 +87,7 @@ body {
     color: #FFD700;
 }
 
-/* STOPKA */
+
 footer {
     background: #222;
     color: #ddd;
@@ -128,7 +127,7 @@ footer {
     font-size: 1.1rem;
     line-height: 1.8;
     color: #444;
-    text-align: justify; /* WYJUSTOWANIE TEKSTU */
+    text-align: justify;
 }
 
 .about-text h2 {
@@ -163,7 +162,7 @@ footer {
 .service-card:hover {
   transform: translateY(-5px);
 }
-/* Sekcja services */
+
 .services h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -193,10 +192,10 @@ details[open] {
   border-color: #666464;
 }
 details summary {
-    background-color: #a4a3a3; /* tło paska */
-    color: rgb(248, 248, 248); /* kolor tekstu */
+    background-color: #a4a3a3;
+    color: rgb(248, 248, 248);
     padding: 10px 15px;
-    border-radius: 8px; /* zaokrąglone rogi paska */
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
     font-size: 1.1em;
@@ -205,10 +204,8 @@ details summary {
 }
 
 details summary:hover {
-    background-color: #555; /* ciut ciemniejsze przy hover */
+    background-color: #555; 
 }
-
-/* Usunięcie domyślnego znacznika strzałki */
 details summary::-webkit-details-marker {
     display: none;
 }
@@ -281,7 +278,6 @@ summary {
   color: #666;
 }
 
-/* NAVBAR (spójne z index.html) */
 .navbar {
   background: #666565;
   text-align: center;
@@ -302,7 +298,6 @@ summary {
   color: #FFD700;
 }
 
-/* SERVICES (details już masz, ale dopasowane) */
 .services h2 {
   font-size: 2rem;
   margin-bottom: 30px;
@@ -337,7 +332,6 @@ summary {
   text-align: justify;
   color: #444;
 }
-/* GALERIA CERTYFIKATÓW */
 .certificate-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -365,7 +359,7 @@ summary {
   display: block;
   border-radius: 12px;
 }
-/* WYŚRODKOWANY, ELEGANCKI TEKST */
+
 .qualifications h2 {
   font-size: 2.2rem;
   text-align: center;
@@ -379,7 +373,7 @@ summary {
   color: #333;
 }
 
-/* GALERIA CERTYFIKATÓW */
+
 .certificate-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -408,7 +402,7 @@ summary {
   border-radius: 12px;
 }
 
-/* LIGHTBOX */
+
 #lightbox {
   position: fixed;
   top: 0;
@@ -434,7 +428,7 @@ summary {
   transform: scale(1.02);
 }
 
-/* NAVBAR W HERO */
+
 .hero .navbar {
     display: flex;
     justify-content: center;
@@ -521,7 +515,7 @@ footer {
   padding: 15px;
   font-size: 0.9rem;
 }
-/* KONTAKT - FORMULARZ */
+
 .contact {
     max-width: 700px;
     margin: 40px auto;
@@ -554,7 +548,7 @@ footer {
     text-decoration: underline;
 }
 
-/* FORMULARZ */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -606,7 +600,7 @@ footer {
     background: #357ABD;
 }
 
-/* RESPONSYWNOŚĆ */
+
 @media (max-width: 768px) {
     .contact {
         margin: 20px;
@@ -637,7 +631,7 @@ footer {
 }
 
 .contact-overlay {
-    background: rgba(255,255,255,0.9); /* półprzezroczyste białe tło formularza */
+    background: rgba(255,255,255,0.9); 
     padding: 40px;
     border-radius: 12px;
     max-width: 700px;
@@ -693,19 +687,19 @@ footer {
     background-color: #357ABD;
 }
 
-/* Responsywność */
+
 @media (max-width: 768px) {
     .contact-overlay {
         padding: 30px 20px;
     }
 }
-/* STRONA BŁĘDU */
+
 .error-page {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5f5f5; /* delikatniejsze tło */
+    background-color: #f5f5f5; 
     padding: 40px 20px;
 }
 
@@ -733,7 +727,7 @@ footer {
 .error-box a.btn-subtle {
     display: inline-block;
     padding: 10px 25px;
-    background-color: #e0e0e0; /* subtelny szary */
+    background-color: #e0e0e0;
     color: #333;
     text-decoration: none;
     border-radius: 8px;
@@ -746,7 +740,7 @@ footer {
     color: #000;
 }
 
-/* Spójność z resztą strony */
+
 html, body {
     height: 100%;
     margin: 0;
@@ -769,7 +763,7 @@ footer {
     font-size: 0.9rem;
     margin-top: auto;
 }
-/* BOXY PODWIADOMOŚCI */
+
 .message-box {
     background: #ffffff;
     padding: 40px 30px;
@@ -817,7 +811,7 @@ img {
     padding: 0 15px;
 }
 
-/* Hero i nawigacja */
+
 .hero-content {
     padding: 20px;
 }
@@ -828,7 +822,6 @@ img {
     gap: 10px;
 }
 
-/* Sekcja o mnie */
 .about .container {
     display: flex;
     flex-wrap: wrap;
@@ -839,13 +832,13 @@ img {
     flex: 1 1 100%;
 }
 
-/* Formularze i przyciski */
+
 button, .btn-primary {
     font-size: 1rem;
     padding: 10px 20px;
 }
 
-/* Media Queries – telefony i małe ekrany */
+
 @media (max-width: 768px) {
     .hero-content h1 {
         font-size: 2rem;

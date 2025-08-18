@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="page-wrapper">
-  <!-- HEADER -->
+
   <header class="subpage-header">
     <div class="header-content">
       <a href="index.html">
@@ -21,7 +21,7 @@
     </div>
   </header>
 
-  <!-- NAWIGACJA -->
+
   <nav class="navbar">
     <a href="index.html#about">O mnie</a>
     <a href="services.html">Udzielana pomoc</a>
@@ -29,7 +29,7 @@
     <a href="kontakt.html">Kontakt</a>
   </nav>
 
-  <!-- SEKCJA KWALIFIKACJE -->
+
   <main class="container">
     <section id="Qualifications" class="qualifications">
       <h2>Kwalifikacje</h2>
@@ -49,11 +49,11 @@
     </section>
   </main>
 
-  <!-- STOPKA -->
+
   <footer>
     &copy; 2025 Żaneta Paulina Komar - Psycholog Psychoterapeuta. Wszystkie prawa zastrzeżone.
   </footer>
-<!-- LIGHTBOX -->
+
 <div id="lightbox">
   <span id="lightbox-close">&times;</span>
   <img src="" alt="Powiększone zdjęcie">
@@ -71,13 +71,13 @@
     });
   });
 
-  // Kliknięcie w przycisk X
+
   lightboxClose.addEventListener('click', () => {
     lightbox.style.display = 'none';
     lightboxImg.src = '';
   });
 
-  // Kliknięcie w tło (poza obrazkiem)
+
   lightbox.addEventListener('click', (e) => {
     if (e.target !== lightboxImg && e.target !== lightboxClose) {
       lightbox.style.display = 'none';
@@ -85,7 +85,7 @@
     }
   });
 
-  // ESC zamyka lightbox
+
   document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
       lightbox.style.display = 'none';
