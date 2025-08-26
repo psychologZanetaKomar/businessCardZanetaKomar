@@ -5,6 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Psychoterapeuta</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- MODAL RODO --- */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #fff;
+            padding: 20px;
+            max-width: 700px;
+            width: 90%;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-btn {
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: bold;
+            border: none;
+            background: none;
+        }
+        .rodo-link {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            cursor: pointer;
+            color: #004080;
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 <div class="page-wrapper">
@@ -37,7 +81,6 @@
                 <p><strong>Telefon:</strong> <a href="tel:+48505843108">+48 505 843 108</a></p>
                 <p><strong>Adres:</strong> ul. Pieniężnego 18B, 10-699 Olsztyn</p>
 
-  
                 <h2>Formularz kontaktowy</h2>
                 <form id="contact-form" action="https://formsubmit.co/psycholog.zanetakomar@gmail.com" method="POST" class="contact-form">
                     <div class="form-group">
@@ -59,41 +102,87 @@
                     <input type="hidden" name="_failure" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/error.html">
 
                     <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+
+                    <!-- Link RODO -->
+                    <span class="rodo-link" id="rodo-link">RODO – klauzula informacyjna</span>
                 </form>
             </div>
         </div>
     </main>
-
 
     <footer>
         &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
     </footer>
 </div>
 
+<!-- Modal RODO -->
+<div class="modal" id="rodo-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Klauzula informacyjna RODO</h3>
+            <button class="close-btn" id="close-modal">&times;</button>
+        </div>
+        <p>
+            Zgodnie z art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 
+            27 kwietnia 2016 r. (RODO) informuję, że:
+        </p>
+        <ol>
+            <li>Administratorem danych osobowych jest <strong>Prywatna Praktyka Psychologiczna i Psychoterapeutyczna Żaneta Komar, ul. Spółdzielcza 12C, 11-001 Dywity</strong>.</li>
+            <li>Dane będą przetwarzane w celu kontaktu oraz udzielenia odpowiedzi na przesłaną wiadomość, 
+            na podstawie art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes administratora).</li>
+            <li>Podanie danych jest dobrowolne, ale niezbędne do udzielenia odpowiedzi.</li>
+            <li>Dane nie będą przekazywane podmiotom trzecim, chyba że będzie to wynikało z przepisów prawa.</li>
+            <li>Przysługuje Pani/Panu prawo dostępu do swoich danych, ich sprostowania, usunięcia, 
+            ograniczenia przetwarzania oraz wniesienia sprzeciwu wobec przetwarzania.</li>
+            <li>Dane będą przechowywane nie dłużej niż jest to konieczne do realizacji celu kontaktu.</li>
+            <li>Przysługuje Pani/Panu prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</li>
+        </ol>
+        <p>
+            Wysyłając wiadomość poprzez formularz, wyraża Pani/Pan zgodę na przetwarzanie podanych danych osobowych w celu kontaktu.
+        </p>
+    </div>
+</div>
 
 <script>
+/* Form Validation*/
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     var name = document.getElementById('name').value;
     if (!name.trim()) {
         alert("Imię jest wymagane.");
-        return false;
+        e.preventDefault();
+        return;
     }
 
     var email = document.getElementById('email').value;
-    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(email)) {
         alert("Proszę podać poprawny adres e-mail.");
-        return false;
+        e.preventDefault();
+        return;
     }
 
     var message = document.getElementById('message').value;
-    if (!message.trim()) {
-        alert("Wiadomość nie może być pusta.");
-        return false;
-    }
-    if (message.trim().length < 10) {
+    if (!message.trim() || message.trim().length < 10) {
         alert("Wiadomość musi mieć co najmniej 10 znaków.");
-        return false;
+        e.preventDefault();
+        return;
+    }
+});
+
+/* modal RODO */
+const rodoLink = document.getElementById("rodo-link");
+const rodoModal = document.getElementById("rodo-modal");
+const closeModal = document.getElementById("close-modal");
+
+rodoLink.addEventListener("click", () => {
+    rodoModal.style.display = "flex";
+});
+closeModal.addEventListener("click", () => {
+    rodoModal.style.display = "none";
+});
+window.addEventListener("click", (e) => {
+    if (e.target === rodoModal) {
+        rodoModal.style.display = "none";
     }
 });
 </script>
