@@ -3,194 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Psychoterapeuta</title>
-    <meta name="description" content="Skontaktuj się z Żanetą Komar – psychologiem i psychoterapeutą w Olsztynie. Umów wizytę telefonicznie, mailowo lub przez formularz kontaktowy.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Kontakt – Żaneta Komar, Psycholog Psychoterapeuta | Olsztyn</title>
+    <meta name="description" content="Skontaktuj się z Żanetą Komar – psychologiem i psychoterapeutką w Olsztynie. Umów wizytę telefonicznie, mailowo lub przez formularz kontaktowy.">
+    <link rel="canonical" href="https://psychologzanetakomar.github.io/businessCardZanetaKomar/kontakt.html">
+    <meta property="og:title" content="Kontakt – Żaneta Komar, Psycholog Psychoterapeuta">
+    <meta property="og:image" content="https://psychologzanetakomar.github.io/businessCardZanetaKomar/img/og-image.jpg">
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="img/favicon-180.png">
+    <link rel="preload" href="fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* --- MODAL RODO --- */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background: #fff;
-            padding: 20px;
-            max-width: 700px;
-            width: 90%;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        .modal-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .close-btn {
-            cursor: pointer;
-            font-size: 22px;
-            font-weight: bold;
-            border: none;
-            background: none;
-        }
-        .rodo-link {
-            display: block;
-            margin-top: 15px;
-            text-align: center;
-            font-size: 14px;
-            cursor: pointer;
-            color: #004080;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
 <div class="page-wrapper">
-   
+
     <header class="subpage-header">
         <div class="header-content">
-            <a href="index.html">
-                <img src="logo.png" alt="Logo" class="logo">
+            <a href="index.html" aria-label="Strona główna">
+                <img src="img/logo.webp" alt="" class="logo" width="110" height="110">
             </a>
             <div class="header-text">
-                <h1>Psycholog Psychoterapeuta</h1>
-                <p>Zapraszam do kontaktu – odpowiem tak szybko, jak to możliwe.</p>
+                <p class="header-name">Żaneta Paulina Komar</p>
+                <p class="header-role">Psycholog · Psychoterapeuta</p>
             </div>
         </div>
     </header>
 
-    <nav class="navbar">
-        <a href="index.html">O mnie</a>
+    <nav class="navbar" aria-label="Menu główne">
+        <a href="index.html#about">O mnie</a>
         <a href="services.html">Udzielana pomoc</a>
         <a href="kwalifikacje.html">Kwalifikacje</a>
-        <a href="kontakt.html" class="active">Kontakt</a>
+        <a href="kontakt.html" class="active" aria-current="page">Kontakt</a>
     </nav>
 
-   
-    <main class="contact-section">
+    <main id="main" class="contact-section">
         <div class="contact-overlay">
-            <div class="container contact-container">
-                <h2>Dane kontaktowe</h2>
-                <p><i class="fa-solid fa-envelope"></i> <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a></p>
-                <p><i class="fa-solid fa-phone"></i> <a href="tel:+48505843108">+48 505 843 108</a></p>
-                <p><i class="fa-solid fa-location-dot"></i> ul. Pieniężnego 18B, 10-699 Olsztyn</p>
+            <div class="contact-container">
+                <h1 class="section-title">Dane kontaktowe</h1>
+                <p class="contact-lead">Zapraszam do kontaktu – odpowiem tak szybko, jak to możliwe.</p>
+                <ul class="contact-list">
+                    <li>
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4 7.3V17h16V7.3zM5.2 7l6.8 4.2L18.8 7z"/></svg>
+                        <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.6a1 1 0 0 1-.25 1z"/></svg>
+                        <a href="tel:+48505843108">+48 505 843 108</a>
+                    </li>
+                    <li>
+                        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                        <span>ul. Pieniężnego 18B, 10-699 Olsztyn</span>
+                    </li>
+                </ul>
 
-                <h2>Formularz kontaktowy</h2>
+                <h2 class="section-title">Formularz kontaktowy</h2>
+
+                <p class="form-note" role="note">
+                    <strong>Prośba o ochronę Twojej prywatności:</strong> w formularzu napisz tylko, w jakiej sprawie się kontaktujesz
+                    i jak mogę się z Tobą skontaktować. Nie opisuj swojego stanu zdrowia ani szczegółów trudności – porozmawiamy o nich
+                    bezpiecznie podczas konsultacji.
+                </p>
+
                 <form id="contact-form" action="https://formsubmit.co/psycholog.zanetakomar@gmail.com" method="POST" class="contact-form">
                     <div class="form-group">
-                        <label for="name">Imię:</label>
-                        <input type="text" id="name" name="name" required placeholder="Wpisz swoje imię">
+                        <label for="name">Imię</label>
+                        <input type="text" id="name" name="name" required maxlength="80" autocomplete="given-name" placeholder="Wpisz swoje imię">
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email kontaktowy:</label>
-                        <input type="email" id="email" name="email" required placeholder="Wpisz swój email">
+                        <label for="email">Email kontaktowy</label>
+                        <input type="email" id="email" name="email" required maxlength="120" autocomplete="email" placeholder="Wpisz swój email">
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Treść wiadomości:</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Napisz swoją wiadomość" minlength="10"></textarea>
+                        <label for="message">Treść wiadomości</label>
+                        <textarea id="message" name="message" rows="5" required minlength="10" maxlength="2000" placeholder="Np. Chciałabym umówić pierwszą konsultację, najlepiej w tygodniu po 16:00."></textarea>
                     </div>
 
+                    <div class="form-check">
+                        <input type="checkbox" id="rodo-ack" name="rodo_zapoznano" value="tak" required>
+                        <label for="rodo-ack">
+                            Zapoznałam/em się z
+                            <button type="button" class="link-button" data-open-dialog="rodo-modal">klauzulą informacyjną RODO</button>
+                            dotyczącą przetwarzania moich danych w celu odpowiedzi na wiadomość.
+                        </label>
+                    </div>
+
+                    <!-- Ochrona przed botami (pole niewidoczne dla ludzi) -->
+                    <div class="hp-field" aria-hidden="true">
+                        <label for="honey">Nie wypełniaj tego pola</label>
+                        <input type="text" id="honey" name="_honey" tabindex="-1" autocomplete="off">
+                    </div>
+                    <input type="hidden" name="_subject" value="Nowa wiadomość ze strony – kontakt">
+                    <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_next" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/dziekujemy.html">
                     <input type="hidden" name="_failure" value="https://psychologzanetakomar.github.io/businessCardZanetaKomar/error.html">
 
                     <button type="submit" class="submit-btn">Wyślij wiadomość</button>
-
-                    <!-- Link RODO -->
-                    <span class="rodo-link" id="rodo-link">RODO – klauzula informacyjna</span>
                 </form>
             </div>
         </div>
     </main>
 
-    <footer>
-        &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
+    <footer class="site-footer">
+        <p>&copy; 2026 Żaneta Paulina Komar · Psycholog, Psychoterapeuta</p>
+        <p><a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
     </footer>
 </div>
 
-<!-- Modal RODO -->
-<div class="modal" id="rodo-modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3>Klauzula informacyjna RODO</h3>
-            <button class="close-btn" id="close-modal">&times;</button>
-        </div>
-        <p>
-            Zgodnie z art. 13 Rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 
-            27 kwietnia 2016 r. (RODO) informuję, że:
-        </p>
-        <ol>
-            <li>Administratorem danych osobowych jest <strong>Prywatna Praktyka Psychologiczna i Psychoterapeutyczna Żaneta Komar, ul. Spółdzielcza 12C, 11-001 Dywity</strong>.</li>
-            <li>Dane będą przetwarzane w celu kontaktu oraz udzielenia odpowiedzi na przesłaną wiadomość, 
-            na podstawie art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes administratora).</li>
-            <li>Podanie danych jest dobrowolne, ale niezbędne do udzielenia odpowiedzi.</li>
-            <li>Dane nie będą przekazywane podmiotom trzecim, chyba że będzie to wynikało z przepisów prawa.</li>
-            <li>Przysługuje Pani/Panu prawo dostępu do swoich danych, ich sprostowania, usunięcia, 
-            ograniczenia przetwarzania oraz wniesienia sprzeciwu wobec przetwarzania.</li>
-            <li>Dane będą przechowywane nie dłużej niż jest to konieczne do realizacji celu kontaktu.</li>
-            <li>Przysługuje Pani/Panu prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (PUODO).</li>
-        </ol>
-        <p>
-            Wysyłając wiadomość poprzez formularz, wyraża Pani/Pan zgodę na przetwarzanie podanych danych osobowych w celu kontaktu.
-        </p>
+<dialog class="modal" id="rodo-modal" aria-labelledby="rodo-title">
+    <div class="modal-header">
+        <h2 id="rodo-title">Klauzula informacyjna RODO</h2>
+        <button type="button" class="close-btn" data-close-dialog aria-label="Zamknij">&times;</button>
     </div>
-</div>
+    <p>Zgodnie z art. 13 RODO (Rozporządzenie (UE) 2016/679) informuję, że:</p>
+    <ol>
+        <li>Administratorem Twoich danych osobowych jest <strong>Prywatna Praktyka Psychologiczna i Psychoterapeutyczna Żaneta Komar, ul. Spółdzielcza 12C, 11-001 Dywity</strong>, e-mail: psycholog.zanetakomar@gmail.com.</li>
+        <li>Dane podane w formularzu (imię, adres e-mail, treść wiadomości) przetwarzam wyłącznie w celu odpowiedzi na wiadomość i ewentualnego umówienia konsultacji – na podstawie art. 6 ust. 1 lit. f RODO (prawnie uzasadniony interes polegający na prowadzeniu korespondencji).</li>
+        <li>Odbiorcami danych są dostawcy usług technicznych, z których korzystam: <strong>FormSubmit</strong> (przekazanie wiadomości z formularza na skrzynkę e-mail) oraz <strong>Google</strong> (poczta Gmail). Może to oznaczać przekazanie danych do państwa trzeciego (USA) na podstawie standardowych klauzul umownych lub decyzji Komisji Europejskiej (EU-U.S. Data Privacy Framework).</li>
+        <li>Dane przechowuję przez czas prowadzenia korespondencji, a następnie nie dłużej niż 12 miesięcy od ostatniej wiadomości, chyba że nawiążemy współpracę terapeutyczną – wtedy obowiązują odrębne zasady, o których poinformuję przy pierwszej wizycie.</li>
+        <li>Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania oraz wniesienia sprzeciwu wobec przetwarzania. Wystarczy napisać na adres e-mail podany wyżej – odpowiem najpóźniej w ciągu miesiąca.</li>
+        <li>Przysługuje Ci również prawo wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych.</li>
+        <li>Podanie danych jest dobrowolne, ale niezbędne do udzielenia odpowiedzi. Dane nie są wykorzystywane do profilowania ani zautomatyzowanego podejmowania decyzji.</li>
+    </ol>
+    <p>Proszę nie przesyłać przez formularz informacji o stanie zdrowia. Szczegóły znajdziesz w <a href="polityka-prywatnosci.html">polityce prywatności</a>.</p>
+</dialog>
 
-<script>
-/* Form Validation*/
-document.getElementById('contact-form').addEventListener('submit', function(e) {
-    var name = document.getElementById('name').value;
-    if (!name.trim()) {
-        alert("Imię jest wymagane.");
-        e.preventDefault();
-        return;
-    }
-
-    var email = document.getElementById('email').value;
-    var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailPattern.test(email)) {
-        alert("Proszę podać poprawny adres e-mail.");
-        e.preventDefault();
-        return;
-    }
-
-    var message = document.getElementById('message').value;
-    if (!message.trim() || message.trim().length < 10) {
-        alert("Wiadomość musi mieć co najmniej 10 znaków.");
-        e.preventDefault();
-        return;
-    }
-});
-
-/* modal RODO */
-const rodoLink = document.getElementById("rodo-link");
-const rodoModal = document.getElementById("rodo-modal");
-const closeModal = document.getElementById("close-modal");
-
-rodoLink.addEventListener("click", () => {
-    rodoModal.style.display = "flex";
-});
-closeModal.addEventListener("click", () => {
-    rodoModal.style.display = "none";
-});
-window.addEventListener("click", (e) => {
-    if (e.target === rodoModal) {
-        rodoModal.style.display = "none";
-    }
-});
-</script>
-
+<script src="js/main.js" defer></script>
 </body>
 </html>

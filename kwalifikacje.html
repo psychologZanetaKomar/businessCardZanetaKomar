@@ -3,97 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kwalifikacje - Żaneta Komar</title>
-  <meta name="description" content="Kwalifikacje i certyfikaty Żanety Komar – psychologa i psychoterapeuty w Olsztynie. Dyplomy i ukończone szkolenia zawodowe.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Kwalifikacje – Żaneta Komar, Psycholog Psychoterapeuta | Olsztyn</title>
+  <meta name="description" content="Kwalifikacje i certyfikaty Żanety Komar – psychologa i psychoterapeutki w Olsztynie. Dyplomy i ukończone szkolenia zawodowe.">
+  <link rel="canonical" href="https://psychologzanetakomar.github.io/businessCardZanetaKomar/kwalifikacje.html">
+  <meta property="og:title" content="Kwalifikacje – Żaneta Komar, Psycholog Psychoterapeuta">
+  <meta property="og:image" content="https://psychologzanetakomar.github.io/businessCardZanetaKomar/img/og-image.jpg">
+  <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="img/favicon-180.png">
+  <link rel="preload" href="fonts/lato-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
 <div class="page-wrapper">
 
   <header class="subpage-header">
     <div class="header-content">
-      <a href="index.html">
-        <img src="logo.png" alt="Logo" class="logo">
+      <a href="index.html" aria-label="Strona główna">
+        <img src="img/logo.webp" alt="" class="logo" width="110" height="110">
       </a>
       <div class="header-text">
-        <h1>Żaneta Paulina Komar</h1>
-        <p>Psycholog · Psychoterapeuta</p>
+        <p class="header-name">Żaneta Paulina Komar</p>
+        <p class="header-role">Psycholog · Psychoterapeuta</p>
       </div>
     </div>
   </header>
 
-
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Menu główne">
     <a href="index.html#about">O mnie</a>
     <a href="services.html">Udzielana pomoc</a>
-    <a href="kwalifikacje.html" class="active">Kwalifikacje</a>
+    <a href="kwalifikacje.html" class="active" aria-current="page">Kwalifikacje</a>
     <a href="kontakt.html">Kontakt</a>
   </nav>
 
-
-  <main class="container">
+  <main id="main" class="container">
     <section id="Qualifications" class="qualifications">
-      <h2>Kwalifikacje</h2>
-      <p>Oto niektóre z moich certyfikatów i dyplomów, które potwierdzają moje kwalifikacje zawodowe:</p>
-      
+      <h1 class="section-title">Kwalifikacje</h1>
+      <p>Oto niektóre z moich certyfikatów i dyplomów, które potwierdzają moje kwalifikacje zawodowe. Kliknij, aby powiększyć.</p>
+
       <div class="certificate-gallery">
-        <div class="certificate-item">
-          <img src="dyplom_intra.jpg" alt="Dyplom Intra" class="cert-img">
-        </div>
-        <div class="certificate-item">
-          <img src="dyplomUG.jpg" alt="Dyplom UG" class="cert-img">
-        </div>
+        <figure class="certificate-item">
+          <button type="button" class="cert-button" data-lightbox-src="img/dyplom-intra.webp" data-lightbox-alt="Dyplom ukończenia Szkoły Psychoterapii INTRA (2024)">
+            <img src="img/dyplom-intra.webp" alt="Dyplom ukończenia Szkoły Psychoterapii INTRA" class="cert-img" width="300" height="218" loading="lazy">
+          </button>
+          <figcaption>Szkoła Psychoterapii INTRA<span>Warszawa, 2024</span></figcaption>
+        </figure>
+        <figure class="certificate-item">
+          <button type="button" class="cert-button" data-lightbox-src="img/dyplom-ug.webp" data-lightbox-alt="Dyplom ukończenia studiów magisterskich z psychologii, Uniwersytet Gdański (2015)">
+            <img src="img/dyplom-ug.webp" alt="Dyplom magistra psychologii, Uniwersytet Gdański" class="cert-img" width="300" height="211" loading="lazy">
+          </button>
+          <figcaption>Magister psychologii, Uniwersytet Gdański<span>Gdańsk, 2015</span></figcaption>
+        </figure>
       </div>
     </section>
   </main>
 
-
-  <footer>
-    &copy; 2025 Żaneta Paulina Komar - Psycholog Psychoterapeuta. Wszystkie prawa zastrzeżone.
+  <footer class="site-footer">
+    <p>&copy; 2026 Żaneta Paulina Komar · Psycholog, Psychoterapeuta</p>
+    <p><a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
   </footer>
-
-<div id="lightbox">
-  <span id="lightbox-close">&times;</span>
-  <img src="" alt="Powiększone zdjęcie">
 </div>
-<script>
-  const certImages = document.querySelectorAll('.certificate-item img');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-  const lightboxClose = document.getElementById('lightbox-close');
 
-  certImages.forEach(img => {
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.style.display = 'flex';
-    });
-  });
+<dialog id="lightbox" class="lightbox" aria-label="Powiększony dyplom">
+  <button type="button" class="lightbox-close" data-close-dialog aria-label="Zamknij">&times;</button>
+  <figure>
+    <img alt="">
+    <figcaption></figcaption>
+  </figure>
+</dialog>
 
-
-  lightboxClose.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-    lightboxImg.src = '';
-  });
-
-
-  lightbox.addEventListener('click', (e) => {
-    if (e.target !== lightboxImg && e.target !== lightboxClose) {
-      lightbox.style.display = 'none';
-      lightboxImg.src = '';
-    }
-  });
-
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === "Escape") {
-      lightbox.style.display = 'none';
-      lightboxImg.src = '';
-    }
-  });
-</script>
-</div>
+<script src="js/main.js" defer></script>
 </body>
 </html>

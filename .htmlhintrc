@@ -1,0 +1,10 @@
+{
+  "doctype-first": true,
+  "title-require": true,
+  "alt-require": true,
+  "id-unique": true,
+  "attr-lowercase": true,
+  "tag-pair": true,
+  "inline-style-disabled": false,
+  "head-script-disabled": false
+}

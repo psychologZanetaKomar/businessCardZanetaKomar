@@ -2,22 +2,30 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Błąd!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self'; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Błąd wysyłki – Żaneta Komar</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="img/favicon-32.png" sizes="32x32" type="image/png">
+    <link rel="apple-touch-icon" href="img/favicon-180.png">
+    <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="page-wrapper">
-    <main class="error-page">
-        <div class="error-box">
-            <h1>Wystąpił błąd!</h1>
-            <p>Twoja wiadomość nie została wysłana. Spróbuj skontaktować się bezpośrednio na adres <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a></p>
-            <a href="index.html" class="btn-subtle">Wróć do strony głównej</a>
+    <main class="status-page">
+        <div class="status-box">
+            <h1 class="status-error">Wystąpił błąd</h1>
+            <p>Twoja wiadomość nie została wysłana. Spróbuj ponownie albo napisz bezpośrednio na adres
+                <a href="mailto:psycholog.zanetakomar@gmail.com">psycholog.zanetakomar@gmail.com</a>.</p>
+            <a href="kontakt.html" class="btn-subtle">Wróć do formularza</a>
         </div>
     </main>
 
-    <footer>
-        &copy; 2025 Żaneta Paulina Komar - Psychoterapeuta. Wszystkie prawa zastrzeżone.
+    <footer class="site-footer">
+        <p>&copy; 2026 Żaneta Paulina Komar · Psycholog, Psychoterapeuta</p>
+        <p><a href="polityka-prywatnosci.html">Polityka prywatności</a></p>
     </footer>
 </div>
 </body>
